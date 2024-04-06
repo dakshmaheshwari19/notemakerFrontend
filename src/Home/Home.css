@@ -1,0 +1,10 @@
+.homeContainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-image: url(../assets/noteswall.jpg);
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-background-color);
+}

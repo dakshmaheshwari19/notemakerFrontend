@@ -1,0 +1,26 @@
+
+.addNote form{
+    width: 100%;
+    align-items: center;
+
+}
+#title{
+font-weight: bold;
+}
+
+.addNote form input{
+    font-size: 15px;
+    width: 100%;
+    font-size: auto;
+    padding: 10px 10px;
+    border: none;
+    box-shadow: none;
+    resize: auto;
+   
+
+}
+.addNote form input:focus{
+border: none;
+box-shadow: none;
+outline: none;
+}

@@ -1,0 +1,23 @@
+.DashboardContainer{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 100vw;
+    height:100vh;
+    margin:0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+.block-1{
+  grid-area: 1/1/2/9;
+  /* border: 1px solid black; */
+}
+.block-2{
+  grid-area: 2/1/9/3;
+  /* border: 1px solid black; */
+
+}
+.block-3{
+  grid-area: 2/3/9/9;
+  /* border: 1px solid black; */
+}

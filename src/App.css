@@ -1,0 +1,108 @@
+
+.mainContainer{
+    width: 100%;
+    margin:0;
+}
+/* Dark Theme */
+.dark-theme {
+   --secondary-background-color:rgba(87, 87, 87, 0.566);
+    --background-color: #1f1f1f;
+    --text-color: #dadada;
+    --button-background-color: #363636;
+    --button-text-color: #ffffff;
+    --form-input-background: #2b2b2b;
+    --form-input-text-color: #ffffff;
+    --form-input-border-color: #555555;
+    --form-input-focus-border-color: #7c7c7c;
+    --main-heading-color: #ffffff;
+    --sub-heading-color: #ffffff;
+    --paragraph-color: #cccccc;
+    --border-color:rgb(137, 137, 137);
+    --link-hover:rgba(231, 231, 231, 0.73);
+    --light-border:rgba(71, 71, 71, 0.899);
+    --icon-hover:rgba(211, 211, 211, 0.276);
+    --icon-hover-text:white;
+
+
+  
+
+  }
+  
+  /* Light Theme */
+  .light-theme {
+    --secondary-background-color:rgb(230, 230, 230);
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --button-background-color: #000000d8;
+    --button-text-color:  #f0f0f0;
+    --form-input-background: #f5f5f5;
+    --form-input-text-color: #333333;
+    --form-input-border-color: #cccccc;
+    --form-input-focus-border-color: #999999;
+    --main-heading-color: #333333;
+    --sub-heading-color: #5a5a5a;
+    --paragraph-color: #8b8b8b;
+    --border-color:rgb(73, 73, 73);
+    --link-hover:rgba(146, 146, 146, 0.756);
+    --light-border:rgb(201, 201, 201);
+    --icon-hover:rgba(137, 137, 137, 0.253);
+    --icon-hover-text:black;
+  }
+  h1{
+    color: var(--main-heading-color);
+  }
+  h2{
+    color: var(--main-heading-color);
+  }
+  h4{
+    color: var(--sub-heading-color);
+  }
+  h3{
+    color: var(--sub-heading-color);
+  }
+  p{
+    color: var(--paragraph-color);
+  }
+  hr{
+    color: var(--text-color);
+    width: 90%;
+  }
+  form input{
+    width:100%;
+    height:2rem;
+    background: var(--background-color);
+    color: var(--text-color);
+    padding: 10px 10px;
+    border: none;
+    box-shadow: none;
+  }
+  form:hover{
+    border:2px var(--form-input-border-color)
+  }
+  button{
+    border: none;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    padding: 5px 10px;
+    /* border-radius: ; */
+    border: 0.1px solid var(--button-background-color);
+    transition: all 0.2s ease;
+
+  }
+  button:hover{
+    background-color: var(--button-text-color);
+    color: var(--button-background-color);
+  }
+.mycon{
+  padding: 3px 3px;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.mycon:hover{
+  background-color: var(--icon-hover);
+}

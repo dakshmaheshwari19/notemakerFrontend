@@ -1,0 +1,56 @@
+.DashboardHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+.leftHeader{
+width: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+.rightHeader{
+  display: flex;
+    gap: 10px;
+    width: auto;
+    justify-content: flex-end;
+    align-items: center;
+}
+.rightHeader form{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  /* top: 50%; */
+  right: 35%;
+  transition: all 0.1s ease-in-out;
+}
+.rightHeader form input{
+  width: 20rem;
+  background-color: var(--icon-hover);
+  /* width: 100%; */
+  border-radius: 0.3rem;
+
+}
+.rightHeader form input:focus{
+  background-color: var(--background-color);
+
+}
+.nav-btn{
+    font-size: 1em;
+    padding: 5px 13px;
+    border: none;
+    background-color: var(--background-color);
+    color: var(--main-heading-color);
+  }
+.nav-btn:hover{
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+  }
+  
