@@ -27,7 +27,7 @@ export const DashboardHeader = () => {
           <div  style={{fontSize:"2em"}}>
           <BiSolidYinYang/>
           </div>
-        <h1> {loading?<></>:<>Secret Diary : {user.username}</>}</h1>
+        <h1> {loading?<></>:<>Secret Diary : {user?.username}</>}</h1>
         {/* <h1> Secret Diary  </h1> */}
         </div>
         <div className="rightHeader">
