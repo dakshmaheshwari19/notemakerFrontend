@@ -6,7 +6,6 @@ export const loadNotes = () => async (dispatch) => {
   try { 
     dispatch(loadNotesStart());
 
-    // Replace this with your actual backend endpoint
     const response = await axios.post(`${import.meta.env.VITE_SERVER}/notes/loadNotes`,{}, {withCredentials:true});
     const notesData = await response.data.arrayOfNotes;
 

@@ -1,4 +1,8 @@
-import { createUserFailure, createUserStart, createUserSuccess, loginUserFailure, loginUserSuccess } from "../../feature/User/userReducer";
+import { resetNotesState } from "../../feature/Notes/notesReducer";
+import { createUserFailure, createUserStart, createUserSuccess,
+   loginUserFailure, loginUserSuccess,loginUserStart,
+   logoutUserStart,logoutUserSuccess,logoutUserFailure,
+  loadUserStart,loadUserSuccess,loadUserFailure } from "../../feature/User/userReducer";
 import axios from 'axios';
 
 export const createUser = (formData) => async (dispatch) => {
@@ -38,11 +42,23 @@ export const createUser = (formData) => async (dispatch) => {
   }
 };
 
+export const loadUser = () => async (dispatch) => {
+  try { 
+    dispatch(loadUserStart());
+
+    const response = await axios.post(`${import.meta.env.VITE_SERVER}/users/loadUser`,{}, {withCredentials:true});
+    const userData = await response.data.userData;
+
+    dispatch(loadUserSuccess(userData));
+  } catch (error) {
+    dispatch(loadUserFailure(error.message));
+  }
+};
 
 export const loginUser = (email, password) => async (dispatch) => {
   try {
     console.log("email in action: ", email);
-    dispatch(loginUserSuccess()); // Dispatch action to indicate pending state
+    dispatch(loginUserStart()); // Dispatch action to indicate pending state
 
     const formdata = {
       email: email,
@@ -55,6 +71,19 @@ export const loginUser = (email, password) => async (dispatch) => {
   } catch (error) {
     console.error('Error logging In:', error);
     dispatch(loginUserFailure());
+    throw error;
+  }
+};
+export const logoutUser = () => async (dispatch) => {
+  try {
+    dispatch(logoutUserStart()); // Dispatch action to indicate pending state
+    const response = await axios.post(`${import.meta.env.VITE_SERVER}/users/logout`,{},{withCredentials: true});
+    await dispatch(logoutUserSuccess(response));
+    await dispatch(resetNotesState());
+    return response; 
+  } catch (error) {
+    console.error('Error logging In:', error);
+    dispatch(logoutUserFailure());
     throw error;
   }
 };

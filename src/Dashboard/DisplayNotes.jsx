@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { loadNotes } from '../app/actions/notesActions.js';
 import { useEffect } from 'react';
 import { Note } from './Note/Note';
+import { loadUser } from '../app/actions/userActions.js';
 
 export const DisplayNotes = () => {
     const dispatch=useDispatch()
@@ -12,7 +13,6 @@ export const DisplayNotes = () => {
     useEffect(() => {
       // dispatch(loadNotes(user._id));
       dispatch(loadNotes());
-      console.log(user.username);
     }, [dispatch]);
   
     if (loading) {

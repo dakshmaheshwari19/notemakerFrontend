@@ -53,10 +53,14 @@ const notesSlice = createSlice({
         state.loading = false;
         // Handle error if needed
       },
+      resetNotesState:(state)=>{
+         state.notes=[];
+      }
     },
   });
 
   export const { loadNotesStart, loadNotesSuccess, loadNotesFailure,
-    updateNote,addNote,deleteNote, changeNoteStatePending, changeNoteStateSuccess, changeNoteStateFailure } = notesSlice.actions;
+    updateNote,addNote,deleteNote, changeNoteStatePending, changeNoteStateSuccess,
+    resetNotesState, changeNoteStateFailure } = notesSlice.actions;
   
   export default notesSlice.reducer;
