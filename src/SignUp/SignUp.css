@@ -34,6 +34,10 @@
     height: 2.2rem;
 }
 .signUpToggle{
+    width: 100%;
     display: flex;
+    justify-content: end;
+    align-items: center;
     cursor: pointer;
+    gap:0.5rem
 }

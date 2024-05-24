@@ -24,10 +24,11 @@ export const DashboardHeader = () => {
     <>
     <div className="DashboardHeader">
         <div className="leftHeader">
-          <div  style={{fontSize:"2em"}}>
+          {/* <div  style={{fontSize:"2em"}}>
           <BiSolidYinYang/>
-          </div>
-        <h1> {loading?<></>:<>Secret Diary : {user?.username}</>}</h1>
+          </div> */}
+        <img src={user?.avatar} alt="" style={{width:"55px",height:"55px",border:"2px solid white",objectFit:"cover",padding:"3px",borderRadius:"50%"}} />
+        <h1> {loading?<></>:<>{user?.fullname}'s Secret Diary </>}</h1>
         {/* <h1> Secret Diary  </h1> */}
         </div>
         <div className="rightHeader">

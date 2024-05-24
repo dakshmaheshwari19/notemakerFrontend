@@ -40,7 +40,7 @@ export const SignUp = () => {
       const resp=await dispatch(createUser(formData));
       console.log("resp:",resp);
       console.log("dispatching completed");
-      navigate("/home/login") ;
+      navigate("/login") ;
 
       // console.log("message received :",message);
     }
