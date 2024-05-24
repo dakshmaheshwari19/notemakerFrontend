@@ -79,6 +79,11 @@
   form:hover{
     border:2px var(--form-input-border-color)
   }
+  form label{
+    font-size: 0.9rem;
+    padding-bottom: 3px;
+    color: #555555;
+  }
   button{
     border: none;
     background-color: var(--button-background-color);
@@ -105,4 +110,7 @@
 }
 .mycon:hover{
   background-color: var(--icon-hover);
+}
+.appWarning{
+  color: red;
 }

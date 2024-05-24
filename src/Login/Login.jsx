@@ -33,7 +33,7 @@ export const Login = () => {
   return (
     <>
       <form onSubmit={handleSubmit} >
-
+        <label htmlFor="email">Email</label>
         <input
           id='email'
           type="email"
@@ -47,20 +47,24 @@ export const Login = () => {
 
         <br />
 
-
+        <label htmlFor="password">Password</label>
         <input
           id='password'
           type="password"
           name="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder='password'
+          placeholder='#$Ab@9olsW%'
         // autoFocus
 
         />
 
         <br />
-        {showFieldsEmpty && "*Email or password missing."}
+        {showFieldsEmpty && <div className="appWarning">*Email or password missing.</div> }
+        <br />
+        <div className="appWarning">
+          *For testing purpose use email- test@test.com and password- testtest
+        </div>
         <br />
         <button type="submit" >
           {loading? <>Verifying</>:<>Login</> }

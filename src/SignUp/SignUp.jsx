@@ -54,44 +54,47 @@ export const SignUp = () => {
     <>
       <form onSubmit={handleSubmit}>
 
+        <label htmlFor="email">Email</label>
         <input
           id='email'
           type="email"
           value={formData.email}
           name="email"
           // onChange={(e) => setTitle(e.target.value)}
-          placeholder='email'
+          placeholder='Ex- harish234@gmail.com'
           onChange={onChange}
         />
 
         <br />
-
+        <label htmlFor="username">Username</label>
         <input
           id='username'
           type="text"
           value={formData.username}
           name="username"
           // onChange={(e) => setDescription(e.target.value)}
-          placeholder='username'
+          placeholder='Ex- Harish420'
           onChange={onChange}
         // autoFocus
 
         />
 
         <br />
+        <label htmlFor="fullname">Fullname</label>
         <input
           id='fullname'
           type="text"
           value={formData.fullname}
           name="fullname"
           // onChange={(e) => setDescription(e.target.value)}
-          placeholder='fullname'
+          placeholder='Ex- Harish Chandra'
           onChange={onChange}
         // autoFocus
 
         />
 
         <br />
+        <label htmlFor="avatar">Avatar</label>
         <input
           id='avatar'
           type="file"
@@ -105,20 +108,21 @@ export const SignUp = () => {
         />
 
         <br />
+        <label htmlFor="password">Password</label>
         <input
           id='password'
           type="password"
           value={formData.password}
           name="password"
           // onChange={(e) => setDescription(e.target.value)}
-          placeholder='password'
+          placeholder='#$Ab@9olsW%'
           onChange={onChange}
         // autoFocus
 
         />
 
         <br />
-        {showFieldsEmpty && "All fields are compulsary"}
+        {showFieldsEmpty && <div className='appWarning'>*All fields are compulsary</div> }
         <br />
         <button >
         {loading? 
