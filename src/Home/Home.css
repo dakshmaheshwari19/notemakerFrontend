@@ -11,17 +11,17 @@
 .signInOptions{
     height:100%;
     font-size: 1rem;
-    background-color: black;
+    background-color: rgb(31, 31, 31);
     color: white;
     padding: 15px 15px;
     border-radius: 0.5rem;
-    border: 2px solid black
+    border: 2px solid rgb(31, 31, 31)
 
 }
 .signInOptions:hover{
     background-color: white;
     color: black;
-    border: 2px solid black
+    border: 2px solid rgb(31, 31, 31)
 }
 .welcomeText{
     width: 100%;
